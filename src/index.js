@@ -18,7 +18,7 @@ const mapImages = urls => {
 
 const mapBreeds = (breeds, val=null) => {
     for (let breed in breeds) {
-        if (val) {
+        if (val && val !== 'all') {
             if (breed[0].toLowerCase() === val) {
                 addLi(document.querySelector('#dog-breeds'), breed)
             }
